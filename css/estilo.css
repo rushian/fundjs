@@ -1,0 +1,19 @@
+.plim{
+    padding: 10px;
+    display: inline-block;
+    width:120px;
+    border-radius: 15px;
+    border: solid 1px #ccc;
+}
+.lista{
+    padding: 10px;
+    display: inline-block;
+    vertical-align: top;
+    border-radius: 15px;
+    border: solid 1px #ccc;
+}
+.cfg{
+    padding: 4px;
+    /*border-radius: 10px;
+    border: 1px #000 solid;*/
+}
