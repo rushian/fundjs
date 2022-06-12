@@ -1,26 +1,48 @@
 <!DOCTYPE html>
 <html>
     <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="Chrome">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" type="text/css" href="css/estilo.css" media="screen" />
     </head>
     <body>
-        <div>
-            <div class='plim'>
-                <center>
-                    <button onclick="executa_plim()" class="cfg">Rodar plim</button>
-                </center>
+        <div class="conteiner">
+            <div class="header">
+                <span class="area_logo">
+                    <img src="imgs/logo_iterasys.png" class="logo">  Iterasys
+                </span>
+                <span class="area_menor">:: Curso de Fundamentos de JavaScript</span>
+            </div>
+            <div class="body">
+                <div class='plim'>
+                    <center>
+                        <button onclick="executa_plim()" class="cfg">Rodar plim</button>
+                    </center>
 
-                <p id="demo">Par ou Impar</p>    
+                    <p id="demo">Par ou Impar</p>    
+                </div>
+                <div class="lista">
+                    <center>
+                        <button onclick="contarItensDaLista()" class="cfg">Contar Itens</button> 
+                    </center>
+                    <p id="lista_cor"></p>   
+                </div>
+                <div class="lista">
+                    <center>
+                        <button onclick="contarItensDaListaMelhorado()" class="cfg">Contar cores</button> 
+                    </center>
+                    <p id="lista_cor1"></p>   
+                </div>
+                <div class="lista">
+                    <center>
+                        <button onclick="ordenarLista()" class="cfg">Ordenar lista</button> 
+                    </center>
+                    <p id="lista_ordenada"></p>   
+                </div>
             </div>
-            <div class="lista">
-                <center>
-                    <button onclick="contarItensDaLista()" class="cfg">Contar Itens</button> 
-                </center>
-                <p id="lista_cor"></p>   
-            </div>
+            <div class="footer">Exerc&iacute;cios do Luciano</div>
         </div>
-        
-    <script src="js/plim.js"></script>
-
+        <script src="js/plim.js"></script>
     </body>
 </html>
