@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="Chrome">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="css/estilo.css" media="screen" />
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+        <!-- Bootstrap Font Icon CSS -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+        <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+        <title>.: Iterasys :. Fundamentos de JavaScript</title>
+    </head>
+    <body>
+        <div class="flx">
+            <div class="header">
+                <span class="area_logo">
+                    <img src="imgs/logo_iterasys.png" class="logo">  Iterasys
+                </span>
+                <span class="area_menor">:: Fundamentos de JavaScript</span>
+            </div>
+            <div class="break"></div>
+            <div>
+                <div class='lista'>
+                    <p class='cnt'>
+                    <button onclick="executa_plim()" class="cfg">Rodar plim</button>
+                    </p>
+                    <p id="demo">Par ou Impar</p>    
+                </div>
+                <div class="lista">
+                    <p class='cnt'>
+                    <button onclick="contarItensDaLista()" class="cfg" id="btnContarItens">Contar Itens</button>   
+                    </p>
+                    <p id="lista_cor"></p>   
+                </div>
+                <div class="lista">
+                    <p class='cnt'>
+                    <button onclick="contarItensDaListaMelhorado()" class="cfg">Contar cores</button> 
+                    </p>
+                    <p id="lista_cor1"></p>   
+                </div>
+                <div class="lista">
+                    <p class='cnt'>
+                        <button data-bs-toggle="tooltip" data-bs-placement="right" class="cfg" id="orderList"  title="Para ver a lista original, abra o console (ctrl+shift+i) antes de clicar." onclick="ordenarLista()">Ordenar lista</button> 
+                    </p>
+                    <p id="lista_ordenada"></p>   
+                </div>
+                <div class="lista">
+                    <p class='cnt'>
+                        <button onclick="aumentarLista()" class="cfg">Adicionar item</button>
+                    </p> 
+                    <p id="lista_expansivel"></p>   
+                </div>
+            </div>
+            <div class="break"></div>
+            <div>
+                <div class="lista">
+                    <p class='cnt'>
+                    <button onclick="saudarPessoa()" class="cfg">Saudar pessoa</button> 
+                    </p>
+                    <p id="pessoa"></p>   
+                </div>
+                <div class="lista">
+                    <p class='cnt'>
+                    <button onclick="" class="cfg">Em desenvolvimento...</button> 
+                    </p>
+                    <p id="pessoa"></p>   
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer">Exerc&iacute;cios do Luciano</div>
+        <script src="js/plim.js"></script>
+    </body>
+</html>

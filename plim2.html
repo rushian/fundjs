@@ -5,6 +5,9 @@
         <meta http-equiv="X-UA-Compatible" content="Chrome">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" type="text/css" href="css/estilo.css" media="screen" />
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script> 
+        <title>.: Iterasys :. Fundamentos de JavaScript</title>
     </head>
     <body>
         <div class="conteiner">
@@ -12,7 +15,7 @@
                 <span class="area_logo">
                     <img src="imgs/logo_iterasys.png" class="logo">  Iterasys
                 </span>
-                <span class="area_menor">:: Curso de Fundamentos de JavaScript</span>
+                <span class="area_menor">:: Fundamentos de JavaScript</span>
             </div>
             <div class="body">
                 <div class='plim'>
@@ -24,7 +27,7 @@
                 </div>
                 <div class="lista">
                     <center>
-                        <button onclick="contarItensDaLista()" class="cfg">Contar Itens</button> 
+                        <button onclick="contarItensDaLista()" class="cfg" id="btnContarItens">Contar Itens</button> 
                     </center>
                     <p id="lista_cor"></p>   
                 </div>
@@ -36,9 +39,24 @@
                 </div>
                 <div class="lista">
                     <center>
-                        <button onclick="ordenarLista()" class="cfg">Ordenar lista</button> 
+                        <button data-toggle="tooltip" data-placement="top" class="form-control" id="userEmail"  alt="Abra  console para ver a lista original" onclick="ordenarLista()" class="cfg">Ordenar lista</button> 
                     </center>
+                    <p  >teste</p>
                     <p id="lista_ordenada"></p>   
+                </div>
+                <div class="lista">
+                    <center>
+                        <button onclick="aumentarLista()" class="cfg">Adicionar item</button> 
+                    </center>
+                    <p id="lista_expansivel"></p>   
+                </div>
+            </div>
+            <div class="body" style="padding-top: 10px;">
+                <div class="lista">
+                    <center>
+                        <button onclick="saudarPessoa()" class="cfg">Saudar pessoa</button> 
+                    </center>
+                    <p id="pessoa"></p>   
                 </div>
             </div>
             <div class="footer">Exerc&iacute;cios do Luciano</div>

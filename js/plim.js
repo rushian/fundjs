@@ -1,3 +1,12 @@
+let pessoa = {
+  nome      : 'Lucas',
+  sobrenome : 'Alves',
+  idade     : 30,
+  vip       : true
+};
+
+
+
 function executa_plim() {
   let plins = [];
   let corpo = "";
@@ -25,38 +34,49 @@ function executa_plim() {
     document.getElementById("demo").innerHTML = "Par ou Impar";
   }
 }
+
 function contarItensDaLista() {
-  const cores = ['azul', 'verde', 'amarelo', 'branco', 'preto'];
+  const cores = ['Azul', 'Verde', 'Amarelo', 'Branco', 'Preto'];
+  //const cores = ['Azul'];
   //const cores = [];
-  let msg = "";
+  let msg = cores;
 
   if (cores.length > 1) {
-    msg = "A lista tem " + cores.length + " itens";
+    msg += "<p>A lista tem " + cores.length + " itens</p>";
   } else if (cores.length == 1) {
-    msg = "A lista tem 1 item";
+    msg += "<p>A lista tem 1 item</p>";
   } else {
-    msg = "A lista está vazia";
+    msg += "<p>A lista está vazia</p>";
   }
 
   console.log(cores);
 
   if (document.getElementById("lista_cor").innerHTML == msg) {
-    document.getElementById("lista_cor").innerHTML = "";
+    document.getElementById("lista_cor").innerHTML = '';
+    document.getElementById("btnContarItens").innerHTML = 'Contar Itens';
   } else {
     document.getElementById("lista_cor").innerHTML = msg;
+    document.getElementById("btnContarItens").innerHTML = 'Itens contados';
   }
 }
+
 function contarItensDaListaMelhorado() {
+  let msg = "";
+  let cores = [];
   let solicita_cores = prompt(
     "Digite as cores separadas por vírgulas, por favor"
   );
 
-  let cores = [];
   if (solicita_cores != null) {
     cores = solicita_cores.split(",");
   }
 
-  let msg = "";
+  //filtrar itens vazios
+  cores = cores.filter(function (v) { 
+    return v.trim();
+  });
+
+  console.log(cores.flat() + '\n' + cores.length);
 
   let tamanho = cores.length;
 
@@ -108,3 +128,29 @@ function ordenarLista() {
     document.getElementById("lista_ordenada").innerHTML = ordenados;
   }
 }
+
+function aumentarLista(){
+  let nome = [];
+  let inpt = prompt("Digite um nome");
+  if(inpt != null && inpt.trim().length != 0){
+    nome.push(inpt);
+    console.log(nome);
+    document.getElementById("lista_expansivel").innerHTML += "<br>" + nome ;
+  }else{
+    alert("Nome em branco não adicionado");
+  }
+}
+
+function saudarPessoa(){
+  
+  if (!document.getElementById("pessoa").innerHTML.includes('Ola')) {
+    document.getElementById("pessoa").innerHTML = 'Ola ' + pessoa.nome + " " + pessoa.sobrenome;
+  } else {
+    document.getElementById("pessoa").innerHTML = '';
+  }
+  
+}
+
+$(document).ready(function(){
+  $('[data-bs-toggle="tooltip"]').tooltip();
+});
