@@ -1,8 +1,15 @@
+//declaração de um objeto
 let pessoa = {
   nome      : 'Lucas',
   sobrenome : 'Alves',
   idade     : 30,
-  vip       : true
+  vip       : true,
+  saudacao  : function(){
+    return "Ol&aacute; " + this.nome + " " + this.sobrenome;
+  },
+  sauda   : function(){
+    document.getElementById("pessoa3").innerHTML = "Oi " + this.nome + " " + this.sobrenome;;
+  }
 };
 
 
@@ -64,7 +71,7 @@ function contarItensDaListaMelhorado() {
   let msg = "";
   let cores = [];
   let solicita_cores = prompt(
-    "Digite as cores separadas por vírgulas, por favor"
+    "Digite as cores separadas por vírgulas, \npor favor"
   );
 
   if (solicita_cores != null) {
@@ -150,7 +157,46 @@ function saudarPessoa(){
   }
   
 }
+function saudarPessoaFuncaoObjeto(){
+  
+  if (!document.getElementById("pessoa2").innerHTML.includes('Olá')) {
+    document.getElementById("pessoa2").innerHTML = pessoa.saudacao();
+  } else {
+    document.getElementById("pessoa2").innerHTML = '';
+  }
+  
+}
+function saudarPessoaMetodoObjeto(){
+  
+  if (!document.getElementById("pessoa3").innerHTML.includes('Oi')) {
+    pessoa.sauda();
+  } else {
+    document.getElementById("pessoa3").innerHTML = '';
+  }
+  
+}
 
 $(document).ready(function(){
   $('[data-bs-toggle="tooltip"]').tooltip();
 });
+
+class Pessoa{
+  constructor(nome, sobrenome, idade,vip){
+    //atributos
+    this.nome = "Maria";
+    this.sobrenome = "Antonieta";
+    this.idade = "25";
+    this.vip = false;
+    //metodos
+    saudacoes(){
+      if (!document.getElementById("pessoa4").innerHTML.includes('Oi')) {
+        'Oi ' + this.nome + " " + this.sobrenome;
+      } else {
+        document.getElementById("pessoa4").innerHTML = '';
+      }
+    }
+  }
+}
+function saudarPessoaClasse() { 
+  Pessoa.saudacoes();
+}
