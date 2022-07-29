@@ -181,22 +181,24 @@ $(document).ready(function(){
 });
 
 class Pessoa{
-  constructor(nome, sobrenome, idade,vip){
+  constructor(nome = 'Maria', sobrenome = 'Antonieta', idade = '25',vip = true){
     //atributos
-    this.nome = "Maria";
-    this.sobrenome = "Antonieta";
-    this.idade = "25";
-    this.vip = false;
-    //metodos
-    saudacoes(){
-      if (!document.getElementById("pessoa4").innerHTML.includes('Oi')) {
-        'Oi ' + this.nome + " " + this.sobrenome;
-      } else {
-        document.getElementById("pessoa4").innerHTML = '';
-      }
+    this.nome = nome;
+    this.sobrenome = sobrenome;
+    this.idade = idade;
+    this.vip = vip;
+  }
+  //metodos
+  saudacoes(){
+    if (!document.getElementById("pessoa4").innerHTML.includes('Oi')) {
+      document.getElementById("pessoa4").innerHTML = 'Oi ' + this.nome + " " + this.sobrenome;
+    } else {
+      document.getElementById("pessoa4").innerHTML = '';
     }
   }
 }
+
 function saudarPessoaClasse() { 
-  Pessoa.saudacoes();
+  let aluna = new Pessoa("Lucas","Silva","23",true);
+  aluna.saudacoes();
 }
